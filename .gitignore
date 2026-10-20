@@ -4,3 +4,5 @@ Thumbs.db
 *.tmp
 # Source PDFs are copyrighted and are never committed
 *.pdf
+# Local render checks
+shots/

@@ -36,13 +36,14 @@ OH and contribution analysis fit together. This course suggests a simple pairing
 
 | If you want to... | Go to |
 |---|---|
+| Learn OH from scratch | [Lesson 1: What a harvest is for](course/lessons/0001-what-a-harvest-is-for.html) and its [reference card](course/reference/0001-oh-core.html) |
 | Design a harvest | [`templates/oh-harvest-design-template.md`](templates/oh-harvest-design-template.md) |
 | Check a harvest design or report | [`red-team/oh-red-team-protocol.md`](red-team/oh-red-team-protocol.md) |
 | Find the right reading | [`bibliography/annotated-bibliography.md`](bibliography/annotated-bibliography.md) |
 | Cite an OH source correctly | [`bibliography/errata.md`](bibliography/errata.md) |
 | See which sources are still being checked | [`bibliography/verification-queue.md`](bibliography/verification-queue.md) |
 
-A route for learning OH from scratch opens when the course is published.
+The lessons are interactive web pages. Until the course website is live, download the repository and open them in a browser; GitHub shows HTML files as code.
 
 ## What is in the repository
 
@@ -52,7 +53,7 @@ A route for learning OH from scratch opens when the course is published.
 | [`course/assets/`](course/assets/) | The stylesheet and script every lesson and reference card uses | Published |
 | [`templates/`](templates/) | Five tools: a harvest design template, an outcome description sheet, a substantiation plan, a harvest analysis matrix and a report checklist | Published |
 | [`red-team/`](red-team/) | A 33-check audit protocol (8 critical) following the six steps, with five verification questions and a verdict scale | Published |
-| `course/` | Eight lessons with retrieval quizzes, applied questions, writing tasks with model answers, and a reference card for each | In progress |
+| [`course/`](course/) | Eight lessons with retrieval quizzes, applied questions, writing tasks with model answers, and a reference card for each | In progress: lesson 1 of 8 published |
 
 ## How the pieces fit
 
