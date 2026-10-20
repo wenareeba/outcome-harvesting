@@ -1,0 +1,27 @@
+{
+  "title": "Outcome Harvesting: course, bibliography, templates and red team protocol",
+  "upload_type": "lesson",
+  "description": "<p>A free library for Outcome Harvesting, an evaluation approach that starts from the changes that have happened and works back to how an intervention contributed to them. It holds an eight-lesson interactive course with reference cards and applied questions; an annotated bibliography of sources each verified at source, with BibTeX and an errata page; five templates; and a red team protocol for checking that a harvest was done properly. Every statement about what an author says carries a page number.</p>",
+  "creators": [
+    {
+      "name": "Wenareeba, Morris"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": [
+    "outcome harvesting",
+    "monitoring and evaluation",
+    "complexity-aware monitoring",
+    "utilization-focused evaluation",
+    "evaluation training"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/wenareeba/contribution-analysis",
+      "relation": "isSupplementedBy",
+      "resource_type": "lesson"
+    }
+  ],
+  "notes": "Written content is licensed CC BY 4.0. Code in the repository is licensed MIT; see LICENSE-CODE."
+}

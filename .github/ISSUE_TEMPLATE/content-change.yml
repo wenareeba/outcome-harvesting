@@ -1,0 +1,18 @@
+name: Propose a content change
+description: Suggest a correction or improvement to a lesson, card, template or the protocol
+labels: ["content"]
+body:
+  - type: input
+    id: file
+    attributes:
+      label: File
+      description: For example red-team/oh-red-team-protocol.md
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change, and why
+      description: Cite the source and page where relevant
+    validations:
+      required: true

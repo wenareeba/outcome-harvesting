@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this material, please cite it as below."
+type: dataset
+title: "Outcome Harvesting: course, bibliography, templates and red team protocol"
+authors:
+  - family-names: Wenareeba
+    given-names: Morris
+repository-code: "https://github.com/wenareeba/outcome-harvesting"
+url: "https://github.com/wenareeba/outcome-harvesting"
+abstract: >-
+  A free, page-cited library for Outcome Harvesting, an evaluation approach that
+  starts from the changes that have happened and works back to how an
+  intervention contributed to them: an eight-lesson interactive course with
+  reference cards, a verified annotated bibliography with BibTeX and an errata
+  page, five templates, and a red team protocol for checking that a harvest was
+  done properly.
+keywords:
+  - outcome harvesting
+  - monitoring and evaluation
+  - complexity-aware monitoring
+  - utilization-focused evaluation
+  - contribution
+license: CC-BY-4.0
+date-released: "2026-10-21"
+version: "1.0.0"

@@ -3,7 +3,7 @@
 [![Content licence: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 [![Code licence: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE-CODE)
 
-A free, page-cited library for Outcome Harvesting (OH): a verified bibliography, design templates, a red team protocol for checking that a harvest was done properly, and, in progress, a short course.
+A free, page-cited library for Outcome Harvesting (OH): a verified bibliography, design templates, a red team protocol for checking that a harvest was done properly, and an eight-lesson course.
 
 Every source listed here was checked in the document itself or at the publisher, repository or Crossref. Statements about what OH authors say carry page numbers, and those pages are checked against the source text before anything is added. Sources that cannot yet be verified are held back until they can be.
 
@@ -42,6 +42,7 @@ OH and contribution analysis fit together. This course suggests a simple pairing
 | Find the right reading | [`bibliography/annotated-bibliography.md`](bibliography/annotated-bibliography.md) |
 | Cite an OH source correctly | [`bibliography/errata.md`](bibliography/errata.md) |
 | See which sources are still being checked | [`bibliography/verification-queue.md`](bibliography/verification-queue.md) |
+| See the whole repository at a glance | [The repository map](index.html) |
 
 The lessons are interactive web pages. Until the course website is live, download the repository and open them in a browser; GitHub shows HTML files as code.
 
@@ -71,11 +72,11 @@ The lessons are interactive web pages. Until the course website is live, downloa
 
 ## Contributing
 
-Suggestions are welcome, especially published harvests from Africa, Asia and Latin America. Until the contributing guide is published, please open an issue with the full citation and where you checked it.
+Suggestions are welcome, especially published harvests from Africa, Asia and Latin America. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the issue forms and the standards every change must meet. Everyone taking part is asked to follow the [code of conduct](CODE_OF_CONDUCT.md).
 
 ## How to cite
 
-Suggested credit: Wenareeba, Morris. (2026). *Outcome Harvesting: course, bibliography, templates and red team protocol*. GitHub repository. https://github.com/wenareeba/outcome-harvesting
+Use the **Cite this repository** button on GitHub, which reads [`CITATION.cff`](CITATION.cff), or: Wenareeba, Morris. (2026). *Outcome Harvesting: course, bibliography, templates and red team protocol* (Version 1.0.0). GitHub repository. https://github.com/wenareeba/outcome-harvesting
 
 ## Licence
 

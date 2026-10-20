@@ -1,0 +1,38 @@
+name: Suggest a source
+description: Propose a publication for the bibliography
+labels: ["source suggestion"]
+body:
+  - type: textarea
+    id: citation
+    attributes:
+      label: Full citation
+      description: Authors, year, title, journal or publisher, volume, issue, pages, DOI or stable link
+    validations:
+      required: true
+  - type: input
+    id: checked
+    attributes:
+      label: Where you checked it
+      description: Publisher page, repository record or Crossref link
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Bibliography section
+      options:
+        - "1. Foundations: Wilson-Grau's own work"
+        - "2. Guides and adaptations by others"
+        - "3. Method development, comparison and critique"
+        - "4. Applications"
+        - "5. Related approaches"
+        - "6. Complexity-aware monitoring"
+    validations:
+      required: true
+  - type: textarea
+    id: use
+    attributes:
+      label: What it is for
+      description: One or two sentences on why a reader would turn to it
+    validations:
+      required: true

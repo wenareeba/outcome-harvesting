@@ -1,0 +1,24 @@
+name: Report a citation error
+description: A citation detail or page number in this repository, or in a published reference list, is wrong
+labels: ["citation error"]
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Source
+    validations:
+      required: true
+  - type: textarea
+    id: versions
+    attributes:
+      label: The versions in circulation
+      description: What appears where (this repository, a journal article's reference list, a website)
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: Where you checked
+      description: Link to the publisher page, repository record or Crossref
+    validations:
+      required: true
