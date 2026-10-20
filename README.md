@@ -49,11 +49,11 @@ The lessons are interactive web pages. Until the course website is live, downloa
 
 | Folder | Contents | Status |
 |---|---|---|
-| [`bibliography/`](bibliography/) | 16 sources in six sections, all verified at source, with BibTeX (`references.bib`) and CSV. An errata page records five citation details that differ between sources. Four sources wait in a verification queue. | Published |
+| [`bibliography/`](bibliography/) | 16 sources in six sections, all verified at source, with BibTeX (`references.bib`) and CSV. An errata page records five citation details that differ between sources and two figures checked against the book's own arithmetic. Four sources wait in a verification queue. | Published |
 | [`course/assets/`](course/assets/) | The stylesheet and script every lesson and reference card uses | Published |
 | [`templates/`](templates/) | Five tools: a harvest design template, an outcome description sheet, a substantiation plan, a harvest analysis matrix and a report checklist | Published |
 | [`red-team/`](red-team/) | A 33-check audit protocol (8 critical) following the six steps, with five verification questions and a verdict scale | Published |
-| [`course/`](course/) | Eight lessons with retrieval quizzes, applied questions, writing tasks with model answers, and a reference card for each | In progress: lessons 1 to 4 of 8 published |
+| [`course/`](course/) | Eight lessons with retrieval quizzes, applied questions, writing tasks with model answers, and a reference card for each | In progress: lessons 1 to 5 of 8 published |
 
 ## How the pieces fit
 
