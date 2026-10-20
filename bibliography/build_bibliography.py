@@ -29,7 +29,7 @@ SOURCES = [
      'OH used as the inquiry framework in a developmental evaluation of a global peacebuilding network.'),
     # 2. Guides and adaptations by others
     ('betterevaluation2024', 'misc', 'Wilson-Grau, R. and Britt, H. and Dewata, Y. and Rogers, P. and Stevens, K.', '2024', 'Outcome harvesting', 'BetterEvaluation, approach page. Original author R. Wilson-Grau; revised by H. Britt, Y. Dewata, P. Rogers and K. Stevens. Last updated 27 June 2024', '', '', '', '', 'https://www.betterevaluation.org/methods-approaches/approaches/outcome-harvesting', 'V', '2',
-     'Free overview of the six steps and the nine principles, with links to guides and examples. Some principle names differ from the book; see errata.'),
+     'Free overview of the six steps and the nine principles, with links to guides and examples. Its principle names follow Chapter 1 of the book, except one; see errata.'),
     ('worldbank2014guide', 'techreport', 'World Bank', '2014', 'Outcome-based learning field guide: Tools to harvest and monitor outcomes and systematically learn from complex projects', 'World Bank, Washington, DC. Working Paper 90176', '', '', '', '10.1596/20006', '', 'V', '2',
      'Practical tools built from pilots with World Bank teams. Its outcome definition is narrower than the brief: a change in the people, groups, communities or organisations a programme works with directly (p. 9). Open access.'),
     ('intrac2017', 'misc', 'INTRAC', '2017', 'Outcome harvesting', 'M&E Universe, INTRAC', '', '', '', '', 'https://www.intrac.org/wpcms/wp-content/uploads/2017/01/Outcome-harvesting.pdf', 'V', '2',

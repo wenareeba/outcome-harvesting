@@ -26,7 +26,7 @@ The brief, the book and one applied chapter. Read the brief first, then the book
 Free, shorter and practical. Useful when you are running a harvest next month.
 
 - Wilson-Grau, R., Britt, H., Dewata, Y., Rogers, P., and Stevens, K. (2024). *Outcome harvesting*. BetterEvaluation, approach page. Original author R. Wilson-Grau; revised by H. Britt, Y. Dewata, P. Rogers and K. Stevens. Last updated 27 June 2024. https://www.betterevaluation.org/methods-approaches/approaches/outcome-harvesting  
-  Free overview of the six steps and the nine principles, with links to guides and examples. Some principle names differ from the book; see errata.
+  Free overview of the six steps and the nine principles, with links to guides and examples. Its principle names follow Chapter 1 of the book, except one; see errata.
 - World Bank (2014a). *Outcome-based learning field guide: Tools to harvest and monitor outcomes and systematically learn from complex projects*. World Bank, Washington, DC. Working Paper 90176. https://doi.org/10.1596/20006  
   Practical tools built from pilots with World Bank teams. Its outcome definition is narrower than the brief: a change in the people, groups, communities or organisations a programme works with directly (p. 9). Open access.
 - INTRAC (2017). *Outcome harvesting*. M&E Universe, INTRAC. https://www.intrac.org/wpcms/wp-content/uploads/2017/01/Outcome-harvesting.pdf  

@@ -3,7 +3,7 @@
 [![Content licence: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 [![Code licence: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE-CODE)
 
-A free, page-cited library for Outcome Harvesting (OH): a verified bibliography, and in progress, design templates, a red team protocol for checking that a harvest was done properly, and a short course.
+A free, page-cited library for Outcome Harvesting (OH): a verified bibliography, design templates, a red team protocol for checking that a harvest was done properly, and, in progress, a short course.
 
 Every source listed here was checked in the document itself or at the publisher, repository or Crossref. Statements about what OH authors say carry page numbers, and those pages are checked against the source text before anything is added. Sources that cannot yet be verified are held back until they can be.
 
@@ -36,11 +36,13 @@ OH and contribution analysis fit together. This course suggests a simple pairing
 
 | If you want to... | Go to |
 |---|---|
+| Design a harvest | [`templates/oh-harvest-design-template.md`](templates/oh-harvest-design-template.md) |
+| Check a harvest design or report | [`red-team/oh-red-team-protocol.md`](red-team/oh-red-team-protocol.md) |
 | Find the right reading | [`bibliography/annotated-bibliography.md`](bibliography/annotated-bibliography.md) |
 | Cite an OH source correctly | [`bibliography/errata.md`](bibliography/errata.md) |
 | See which sources are still being checked | [`bibliography/verification-queue.md`](bibliography/verification-queue.md) |
 
-More routes open as each part of the library is published: learning OH from scratch, designing a harvest, and checking a harvest report.
+A route for learning OH from scratch opens when the course is published.
 
 ## What is in the repository
 
@@ -48,8 +50,8 @@ More routes open as each part of the library is published: learning OH from scra
 |---|---|---|
 | [`bibliography/`](bibliography/) | 16 sources in six sections, all verified at source, with BibTeX (`references.bib`) and CSV. An errata page records five citation details that differ between sources. Four sources wait in a verification queue. | Published |
 | [`course/assets/`](course/assets/) | The stylesheet and script every lesson and reference card uses | Published |
-| `templates/` | Five tools: a harvest design template, an outcome description sheet, a substantiation plan, a harvest analysis matrix and a report checklist | In progress |
-| `red-team/` | An audit protocol following the six steps, with verification questions | In progress |
+| [`templates/`](templates/) | Five tools: a harvest design template, an outcome description sheet, a substantiation plan, a harvest analysis matrix and a report checklist | Published |
+| [`red-team/`](red-team/) | A 33-check audit protocol (8 critical) following the six steps, with five verification questions and a verdict scale | Published |
 | `course/` | Eight lessons with retrieval quizzes, applied questions, writing tasks with model answers, and a reference card for each | In progress |
 
 ## How the pieces fit
