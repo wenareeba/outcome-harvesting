@@ -13,8 +13,9 @@
    - Likelihood reasoning: <div data-lr> with two .seg[data-q=t|f] groups of buttons [data-v=hi|lo].
    - Factor placer: <div data-placer> with a question .seg[data-q] and .place-item[data-answer] items.
    - Tabs: <div data-tabs> with buttons [data-panel] and .tab-panel elements.
-   - Design chooser: <div data-chooser> with checkboxes [data-rec] and a .chooser-out element.
-   - Outcome statement builder: <div data-builder> with fields [data-part] and .build-out, .build-checks. */
+   - Design chooser: <div data-chooser data-multi data-empty> with checkboxes [data-rec] and a .chooser-out element.
+   - Outcome statement builder: <div data-builder> with fields [data-part] and .build-out, .build-checks.
+   - Harvest time estimator: <div data-estimator> with inputs [data-in] and buttons [data-rate]. */
 (function () {
   "use strict";
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -291,8 +292,8 @@
     function draw() {
       var on = boxes.filter(function (b) { return b.checked; });
       out.innerHTML = on.length
-        ? "<ol>" + on.map(function (b) { return "<li>" + b.dataset.rec + "</li>"; }).join("") + "</ol>" + (on.length > 1 ? "<p>Build every part on one shared theory of the programme, so the parts answer one question together.</p>" : "")
-        : "<p>Tick at least one question to see a design.</p>";
+        ? "<ol>" + on.map(function (b) { return "<li>" + b.dataset.rec + "</li>"; }).join("") + "</ol>" + (on.length > 1 && ch.dataset.multi ? "<p>" + ch.dataset.multi + "</p>" : "")
+        : "<p>" + (ch.dataset.empty || "Tick at least one option.") + "</p>";
     }
     boxes.forEach(function (b) { b.addEventListener("change", draw); }); draw();
   });
@@ -328,6 +329,31 @@
     });
     var clr = $(".build-clear", bd);
     if (clr) clr.addEventListener("click", function () { Object.keys(f).forEach(function (k) { f[k].value = ""; }); draw(); });
+    draw();
+  });
+  /* harvest time estimator: <div data-estimator> with number inputs [data-in=pages|sources|per|subst],
+     a .seg of buttons [data-rate] for pages per hour, and a .est-out table body. Rules of thumb from Wilson-Grau (2019, pp. 44 to 47). */
+  $$("[data-estimator]").forEach(function (es) {
+    var ins = {}; $$("[data-in]", es).forEach(function (el) { ins[el.dataset.in] = el; });
+    var rates = $$("button[data-rate]", es), out = $(".est-out", es), rate = 5;
+    function n(k, lo, hi) { var x = parseFloat(ins[k].value); if (isNaN(x)) x = 0; return Math.max(lo, Math.min(hi, x)); }
+    function d(h) { return (Math.round(h / 8 * 10) / 10).toFixed(1); }
+    function draw() {
+      var pages = n("pages", 0, 5000), src = Math.round(n("sources", 0, 500)), per = n("per", 0, 50), sub = n("subst", 0, 100);
+      var outcomes = Math.round(src * per), subN = Math.round(outcomes * sub / 100);
+      var rows = [
+        ["1. Design", 3 * 8 + 2.5 * 8, "3 days to agree the design with one or two users, plus about 2.5 days to design and pilot the instruments", "pp. 44 to 45"],
+        ["2. Review documents", pages / rate, pages + " pages at " + rate + " pages an hour", "p. 45"],
+        ["3. Engage with sources", src * 5, src + " sources at about 5 hours each. Sources give about 1 hour per outcome: " + outcomes + " hours in all", "p. 46"],
+        ["4. Substantiate", (outcomes ? 8 : 0) + subN * 0.5, (outcomes ? "8 hours to decide what to substantiate, then " : "") + subN + " outcomes at half an hour each", "p. 47"],
+        ["5. Classify and enter", outcomes > 30 ? outcomes / 140 * 8 + outcomes / 20 : outcomes / 20, outcomes + " outcomes" + (outcomes > 30 ? ": classifying at 140 a day, entering at 20 an hour" : ": entering at 20 an hour; classifying is optional below 30 to 40"), "p. 47"]
+      ];
+      var total = rows.reduce(function (a, r) { return a + r[1]; }, 0);
+      out.innerHTML = rows.map(function (r) { return "<tr><td>" + r[0] + "</td><td class=\"num\">" + d(r[1]) + "</td><td>" + r[2] + " <span class=\"pg\">(" + r[3] + ")</span></td></tr>"; }).join("")
+        + "<tr class=\"key\"><td>Steps 1 to 5</td><td class=\"num\">" + d(total) + "</td><td>Harvester days, before interpretation, writing and Step 6, which the book does not estimate this way</td></tr>";
+    }
+    rates.forEach(function (b) { b.addEventListener("click", function () { rate = parseFloat(b.dataset.rate); rates.forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); }); draw(); }); });
+    Object.keys(ins).forEach(function (k) { ins[k].addEventListener("input", draw); });
     draw();
   });
 })();

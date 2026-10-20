@@ -368,6 +368,27 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
 .build-checks li.todo { color: var(--amber); }
 @media (max-width: 760px) { .build-grid { grid-template-columns: minmax(0, 1fr); } }
 
+/* harvest time estimator */
+.estimator { margin: 2.5rem 0 1rem; padding: 1.5rem; background: var(--accent-wash); border-radius: 12px; font-family: var(--sans); }
+.estimator > .label { color: var(--accent); }
+.est-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem 1rem; margin: .8rem 0 .4rem; }
+.est-grid label { display: grid; gap: .3rem; font-size: .82rem; font-weight: 600; color: var(--ink-2); align-content: start; }
+.est-grid input { font: inherit; font-size: 1rem; font-variant-numeric: tabular-nums; color: var(--ink); background: var(--surface); border: 1px solid var(--rule-strong); border-radius: 8px; padding: .5rem .65rem; width: 100%; }
+.est-grid input:focus { border-color: var(--accent); outline: none; }
+.est-rate { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem 1rem; font-size: .84rem; color: var(--ink-2); margin: .5rem 0 1rem; }
+.est-rate .seg { margin: 0; background: var(--surface); }
+.estimator table { background: var(--surface); border-radius: 8px; }
+.estimator th, .estimator td { padding-left: .8rem; }
+.estimator td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; font-weight: 500; }
+.estimator th.num { text-align: right; }
+@media (max-width: 760px) {
+  .est-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .estimator thead th:nth-child(3) { display: none; }
+  .estimator tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; }
+  .estimator td:nth-child(3) { grid-column: 1 / -1; padding-top: 0; color: var(--muted); }
+  .estimator tr td:first-child, .estimator tr td.num { border-bottom: 0; }
+}
+
 @media print {
   .rail, .progress, .contents-strip, .btn, .btn-row { display: none !important; }
   .lesson { display: block; padding: 0; }
