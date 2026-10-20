@@ -53,7 +53,7 @@ The lessons are interactive web pages. Until the course website is live, downloa
 | [`course/assets/`](course/assets/) | The stylesheet and script every lesson and reference card uses | Published |
 | [`templates/`](templates/) | Five tools: a harvest design template, an outcome description sheet, a substantiation plan, a harvest analysis matrix and a report checklist | Published |
 | [`red-team/`](red-team/) | A 33-check audit protocol (8 critical) following the six steps, with five verification questions and a verdict scale | Published |
-| [`course/`](course/) | Eight lessons with retrieval quizzes, applied questions, writing tasks with model answers, and a reference card for each | In progress: lesson 1 of 8 published |
+| [`course/`](course/) | Eight lessons with retrieval quizzes, applied questions, writing tasks with model answers, and a reference card for each | In progress: lessons 1 and 2 of 8 published |
 
 ## How the pieces fit
 

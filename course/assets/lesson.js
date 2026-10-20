@@ -13,7 +13,8 @@
    - Likelihood reasoning: <div data-lr> with two .seg[data-q=t|f] groups of buttons [data-v=hi|lo].
    - Factor placer: <div data-placer> with a question .seg[data-q] and .place-item[data-answer] items.
    - Tabs: <div data-tabs> with buttons [data-panel] and .tab-panel elements.
-   - Design chooser: <div data-chooser> with checkboxes [data-rec] and a .chooser-out element. */
+   - Design chooser: <div data-chooser> with checkboxes [data-rec] and a .chooser-out element.
+   - Outcome statement builder: <div data-builder> with fields [data-part] and .build-out, .build-checks. */
 (function () {
   "use strict";
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -294,5 +295,39 @@
         : "<p>Tick at least one question to see a design.</p>";
     }
     boxes.forEach(function (b) { b.addEventListener("change", draw); }); draw();
+  });
+  /* outcome statement builder: <div data-builder> with fields [data-part=who|what|when|where|contribution|significance],
+     a .build-out element for the assembled statement and a .build-checks list; optional button.build-example
+     fills the fields from the root's data-example JSON. Checks are prompts for the learner, not a grade. */
+  $$("[data-builder]").forEach(function (bd) {
+    var f = {}; $$("[data-part]", bd).forEach(function (el) { f[el.dataset.part] = el; });
+    var out = $(".build-out", bd), list = $(".build-checks", bd);
+    var KAS = /\b(aware|awareness|knowledge|knowledgeable|understand|understanding|learn(ed|t)?|attitudes?|sensiti[sz]ed|trained|attended|participated)\b/i;
+    var OVER = /\b(caused|cause[sd]? by|led to|resulted in|because of|thanks to|solely|entirely due|attributable)\b/i;
+    var DATE = /\b(1[89]|20)\d\d\b|\b(january|february|march|april|may|june|july|august|september|october|november|december)\b/i;
+    function v(k) { return f[k] ? f[k].value.trim() : ""; }
+    function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+    function draw() {
+      var who = v("who"), what = v("what"), when = v("when"), where = v("where"), con = v("contribution"), sig = v("significance");
+      var s = [when, who, what].filter(Boolean).join(", ").replace(/, ([a-z])/, " $1");
+      out.innerHTML = (s ? "<p><b>Outcome.</b> " + esc((when ? when + ", " : "") + who + (what ? " " + what : "") + (where ? " in " + where : "")) + ".</p>" : "<p class=\"quiet\">Your outcome statement will appear here as you type.</p>")
+        + (sig ? "<p><b>Significance.</b> " + esc(sig) + "</p>" : "") + (con ? "<p><b>Contribution.</b> " + esc(con) + "</p>" : "");
+      var checks = [
+        [!!who, "Names the social actor who changed", "Name who changed: an individual, group, community, organisation or institution."],
+        [!!what && !KAS.test(what), "Describes a change in what they do", what && KAS.test(what) ? "This reads like a change in knowledge or attitude, or an activity. What did they do differently (Wilson-Grau 2019, p. 175)?" : "Say what they did differently."],
+        [DATE.test(when), "Says when the change happened", "Give a date or at least a month and year."],
+        [!!where, "Says where it happened", "Name the place: village, district, country or forum."],
+        [!!con && !OVER.test(con), "Gives a plausible contribution, not attribution", con && OVER.test(con) ? "Words like \"caused\" or \"led to\" claim attribution. Describe what the intervention did that plausibly influenced the change (Wilson-Grau and Britt 2013, p. 16)." : "Say what the intervention did that plausibly influenced the change."]
+      ];
+      list.innerHTML = checks.map(function (c) { return '<li class="' + (c[0] ? "ok" : "todo") + '"><span class="mk" aria-hidden="true">' + (c[0] ? "\u2713" : "\u2022") + "</span><span>" + (c[0] ? c[1] : c[2]) + "</span></li>"; }).join("");
+    }
+    Object.keys(f).forEach(function (k) { f[k].addEventListener("input", draw); });
+    var ex = $(".build-example", bd);
+    if (ex && bd.dataset.example) ex.addEventListener("click", function () {
+      var d = JSON.parse(bd.dataset.example); Object.keys(d).forEach(function (k) { if (f[k]) f[k].value = d[k]; }); draw();
+    });
+    var clr = $(".build-clear", bd);
+    if (clr) clr.addEventListener("click", function () { Object.keys(f).forEach(function (k) { f[k].value = ""; }); draw(); });
+    draw();
   });
 })();

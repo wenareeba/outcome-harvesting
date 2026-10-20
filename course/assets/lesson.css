@@ -348,6 +348,26 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3
 .map li.here a { color: var(--ink); font-weight: 600; text-decoration: none; }
 .endnote { margin-top: 3.5rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: .85rem; color: var(--muted); }
 
+
+/* outcome statement builder */
+.builder { margin: 2.5rem 0 1rem; padding: 1.5rem; background: var(--accent-wash); border-radius: 12px; font-family: var(--sans); }
+.builder > .label { color: var(--accent); }
+.build-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem 1rem; margin: .8rem 0 1rem; }
+.build-grid label { display: grid; gap: .3rem; font-size: .84rem; font-weight: 600; color: var(--ink-2); }
+.build-grid label.wide { grid-column: 1 / -1; }
+.build-grid label span { font-weight: 400; color: var(--muted); font-size: .8rem; }
+.build-grid input, .build-grid textarea { font: inherit; font-size: .95rem; font-weight: 400; color: var(--ink); background: var(--surface); border: 1px solid var(--rule-strong); border-radius: 8px; padding: .55rem .7rem; width: 100%; margin: 0; min-height: 0; }
+.build-grid textarea { min-height: 4.5rem; resize: vertical; }
+.build-grid input:focus, .build-grid textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px var(--surface); }
+.build-out { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 1rem 1.15rem; font-family: var(--serif); font-size: 1.02rem; line-height: 1.5; }
+.build-out p { margin: 0 0 .5rem; } .build-out p:last-child { margin: 0; }
+.build-out b { font-family: var(--sans); font-size: .82rem; color: var(--accent); }
+.build-checks { list-style: none; margin: .9rem 0 0; padding: 0; display: grid; gap: .4rem; font-size: .88rem; line-height: 1.45; }
+.build-checks li { display: grid; grid-template-columns: 1.2rem minmax(0, 1fr); gap: .4rem; }
+.build-checks li.ok { color: var(--ink-2); } .build-checks li.ok .mk { color: var(--accent); font-weight: 600; }
+.build-checks li.todo { color: var(--amber); }
+@media (max-width: 760px) { .build-grid { grid-template-columns: minmax(0, 1fr); } }
+
 @media print {
   .rail, .progress, .contents-strip, .btn, .btn-row { display: none !important; }
   .lesson { display: block; padding: 0; }
