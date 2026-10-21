@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-21
+
+- Zenodo DOI added: 10.5281/zenodo.23514918 (all versions) and 10.5281/zenodo.23514919 (version 1.0.0). DOI badge on the README; citation file and suggested citation updated.
+
 ## 2026-10-21 (version 1.0.0)
 
 - Repository map as the site's start page (`index.html`), with six routes through the material.

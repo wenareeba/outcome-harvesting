@@ -5,6 +5,14 @@ title: "Outcome Harvesting: course, bibliography, templates and red team protoco
 authors:
   - family-names: Wenareeba
     given-names: Morris
+doi: 10.5281/zenodo.23514918
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23514918
+    description: "Concept DOI: always resolves to the latest version"
+  - type: doi
+    value: 10.5281/zenodo.23514919
+    description: "Version 1.0.0"
 repository-code: "https://github.com/wenareeba/outcome-harvesting"
 url: "https://github.com/wenareeba/outcome-harvesting"
 abstract: >-

@@ -2,6 +2,7 @@
 
 [![Content licence: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 [![Code licence: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE-CODE)
+[![DOI](https://zenodo.org/badge/1427437416.svg)](https://doi.org/10.5281/zenodo.23514918)
 
 A free, page-cited library for Outcome Harvesting (OH): a verified bibliography, design templates, a red team protocol for checking that a harvest was done properly, and an eight-lesson course.
 
@@ -76,7 +77,7 @@ Suggestions are welcome, especially published harvests from Africa, Asia and Lat
 
 ## How to cite
 
-Use the **Cite this repository** button on GitHub, which reads [`CITATION.cff`](CITATION.cff), or: Wenareeba, Morris. (2026). *Outcome Harvesting: course, bibliography, templates and red team protocol* (Version 1.0.0). GitHub repository. https://github.com/wenareeba/outcome-harvesting
+Use the **Cite this repository** button on GitHub, which reads [`CITATION.cff`](CITATION.cff), or: Wenareeba, Morris. (2026). *Outcome Harvesting: course, bibliography, templates and red team protocol* (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.23514918
 
 ## Licence
 
