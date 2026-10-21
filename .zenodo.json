@@ -16,12 +16,5 @@
     "utilization-focused evaluation",
     "evaluation training"
   ],
-  "related_identifiers": [
-    {
-      "identifier": "https://github.com/wenareeba/contribution-analysis",
-      "relation": "isSupplementedBy",
-      "resource_type": "lesson"
-    }
-  ],
   "notes": "Written content is licensed CC BY 4.0. Code in the repository is licensed MIT; see LICENSE-CODE."
 }

@@ -2,6 +2,8 @@
 
 ## 2026-10-21
 
+- Errata and Lesson 5: the p. 93 sample-size entry no longer says 51 is wrong. The book does not state its assumed proportion; 51 follows at about 2.5% of outcomes wrong, 89 at the conservative 50%, 78 at the book's own under 10% (p. 95). Every assumption tested still needs over half of a typical harvest.
+- Links to the contribution analysis course removed from Lesson 8, the README, the repository map and the Zenodo metadata until that course is public.
 - Zenodo DOI added: 10.5281/zenodo.23514918 (all versions) and 10.5281/zenodo.23514919 (version 1.0.0). DOI badge on the README; citation file and suggested citation updated.
 
 ## 2026-10-21 (version 1.0.0)

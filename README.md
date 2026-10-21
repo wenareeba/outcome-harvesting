@@ -25,7 +25,7 @@ A harvest runs in six steps (Wilson-Grau and Britt 2013):
 
 The 2019 book adds nine principles to guide them: five on process (pp. 149 to 167) and four on content (pp. 169 to 187).
 
-OH and contribution analysis fit together. This course suggests a simple pairing: harvest the outcomes, then test the most important ones with [contribution analysis](https://github.com/wenareeba/contribution-analysis). That pairing is course guidance, not a claim from either method's authors.
+OH and contribution analysis fit together. This course suggests a simple pairing: harvest the outcomes, then test the most important ones with contribution analysis. That pairing is course guidance, not a claim from either method's authors.
 
 ## Who this is for
 
