@@ -77,7 +77,7 @@ Suggestions are welcome, especially published harvests from Africa, Asia and Lat
 
 ## How to cite
 
-Use the **Cite this repository** button on GitHub, which reads [`CITATION.cff`](CITATION.cff), or: Wenareeba, Morris. (2026). *Outcome Harvesting: course, bibliography, templates and red team protocol* (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.23514918
+Use the **Cite this repository** button on GitHub, which reads [`CITATION.cff`](CITATION.cff), or: Wenareeba, Morris. (2026). *Outcome Harvesting: Course, Bibliography, Templates and Red Team Protocol* (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.23514918
 
 ## Licence
 
