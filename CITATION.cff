@@ -9,7 +9,7 @@ doi: 10.5281/zenodo.23514918
 identifiers:
   - type: doi
     value: 10.5281/zenodo.23514918
-    description: "Concept DOI: always resolves to the latest version"
+    description: "All versions on Zenodo; resolves to the latest"
   - type: doi
     value: 10.5281/zenodo.23514919
     description: "Version 1.0.0"
@@ -23,7 +23,7 @@ abstract: >-
   page, five templates, and a red team protocol for checking that a harvest was
   done properly.
 keywords:
-  - outcome harvesting
+  - Outcome Harvesting
   - monitoring and evaluation
   - complexity-aware monitoring
   - utilization-focused evaluation
