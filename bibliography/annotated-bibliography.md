@@ -58,14 +58,14 @@ Published harvests, with Africa, Asia and Latin America sought out.
 
 ## 5. Related approaches
 
-Outcome Mapping, Most Significant Change, QuIP and contribution analysis.
+Outcome Mapping, Most Significant Change, QuIP and Contribution Analysis.
 
 - Davies, R., and Dart, J. (2005). *The 'Most Significant Change' (MSC) technique: A guide to its use*. Version 1.00, April 2005. https://susana.org/knowledge-hub/resources?id=4568  
   The standard guide to MSC, the other approach that collects stories of change without fixing indicators in advance. Free.
 - Copestake, J., Morsink, M., and Remnant, F. (2019). *Attributing development impact: The Qualitative Impact Protocol case book*. Practical Action Publishing. https://doi.org/10.3362/9781780447469  
   Cases using QuIP, which asks intended beneficiaries about change without naming the intervention. Read beside Copestake (2017). Open access.
 - Mayne, J. (2019). Revisiting contribution analysis. *Canadian Journal of Program Evaluation*, 34(2), 171 to 191. https://doi.org/10.3138/cjpe.68004  
-  The current statement of contribution analysis, the method this course pairs with OH: harvest the outcomes, then test the important ones.
+  The current statement of Contribution Analysis, the method this course pairs with OH: harvest the outcomes, then test the important ones.
 
 ## 6. Complexity-aware monitoring
 

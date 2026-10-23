@@ -62,7 +62,7 @@ SOURCES = [
     ('copestake2019', 'book', 'Copestake, J. and Morsink, M. and Remnant, F.', '2019', 'Attributing development impact: The Qualitative Impact Protocol case book', 'Practical Action Publishing', '', '', '', '10.3362/9781780447469', '', 'V', '5',
      'Cases using QuIP, which asks intended beneficiaries about change without naming the intervention. Read beside Copestake (2017). Open access.'),
     ('mayne2019', 'article', 'Mayne, J.', '2019', 'Revisiting contribution analysis', 'Canadian Journal of Program Evaluation', '34', '2', '171--191', '10.3138/cjpe.68004', '', 'V', '5',
-     'The current statement of contribution analysis, the method this course pairs with OH: harvest the outcomes, then test the important ones.'),
+     'The current statement of Contribution Analysis, the method this course pairs with OH: harvest the outcomes, then test the important ones.'),
     # 6. Complexity-aware monitoring
     ('britt2013', 'techreport', 'Britt, H.', '2013', 'Discussion note: Complexity-aware monitoring', 'USAID, Monitoring and Evaluation Series, Version 2.0, December 2013', '', '', '', '', 'https://www.betterevaluation.org/sites/default/files/Complexity_Aware_Monitoring_2013-12-11_FINAL.pdf', 'V', '6',
      'Places OH among five complexity-aware monitoring approaches (p. 7) and explains why such methods look for unintended as well as intended results (p. 11).'),
@@ -81,7 +81,7 @@ SECTIONS = {
     "2": ("Guides and adaptations by others", "Free, shorter and practical. Useful when you are running a harvest next month."),
     "3": ("Method development, comparison and critique", "Where others adapt OH, test it, or compare it with other approaches. A small literature so far."),
     "4": ("Applications", "Published harvests, with Africa, Asia and Latin America sought out."),
-    "5": ("Related approaches", "Outcome Mapping, Most Significant Change, QuIP and contribution analysis."),
+    "5": ("Related approaches", "Outcome Mapping, Most Significant Change, QuIP and Contribution Analysis."),
     "6": ("Complexity-aware monitoring", "Why methods like OH exist."),
 }
 

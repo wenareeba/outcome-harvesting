@@ -10,6 +10,7 @@ Newest first. Each section lists what a release added; the all-versions DOI is 1
 - README links to Lesson 1, its reference card and the repository map now open the web pages on the course website instead of GitHub's code view.
 - Lesson 8 links to the companion Contribution Analysis course, now public ("harvest, then test").
 - Keywords in `CITATION.cff` and `.zenodo.json` capitalise Outcome Harvesting.
+- "Contribution Analysis" is capitalised in the course's own prose, headings, labels and quiz text (29 places). Mayne's title, *Revisiting contribution analysis*, keeps its published spelling.
 
 ## Version 1.1.1 (2026-10-23)
 
@@ -22,7 +23,7 @@ Newest first. Each section lists what a release added; the all-versions DOI is 1
 - Every citation now points to the all-versions DOI, 10.5281/zenodo.23514918, which always resolves to the latest version. The suggested citation in the README no longer names a single version.
 - Citation title in title case in `CITATION.cff` and `.zenodo.json`, matching the README.
 - Errata and Lesson 5: the p. 93 sample-size entry no longer says 51 is wrong. The book does not state its assumed proportion; 51 follows at about 2.5% of outcomes wrong, 89 at the conservative 50%, 78 at the book's own under 10% (p. 95). Every assumption tested still needs over half of a typical harvest.
-- Links to the contribution analysis course removed from Lesson 8, the README, the repository map and the Zenodo metadata until that course is public.
+- Links to the Contribution Analysis course removed from Lesson 8, the README, the repository map and the Zenodo metadata until that course is public.
 - Zenodo DOI added: 10.5281/zenodo.23514918 (all versions) and 10.5281/zenodo.23514919 (version 1.0.0). DOI badge on the README; citation file and suggested citation updated.
 
 ## Version 1.0.0 (2026-10-21)
