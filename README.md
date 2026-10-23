@@ -37,15 +37,15 @@ OH and contribution analysis fit together. This course suggests a simple pairing
 
 | If you want to... | Go to |
 |---|---|
-| Learn OH from scratch | [Lesson 1: What a harvest is for](course/lessons/0001-what-a-harvest-is-for.html) and its [reference card](course/reference/0001-oh-core.html) |
+| Learn OH from scratch | [Lesson 1: What a harvest is for](https://wenareeba.github.io/outcome-harvesting/course/lessons/0001-what-a-harvest-is-for.html) and its [reference card](https://wenareeba.github.io/outcome-harvesting/course/reference/0001-oh-core.html) |
 | Design a harvest | [`templates/oh-harvest-design-template.md`](templates/oh-harvest-design-template.md) |
 | Check a harvest design or report | [`red-team/oh-red-team-protocol.md`](red-team/oh-red-team-protocol.md) |
 | Find the right reading | [`bibliography/annotated-bibliography.md`](bibliography/annotated-bibliography.md) |
 | Cite an OH source correctly | [`bibliography/errata.md`](bibliography/errata.md) |
 | See which sources are still being checked | [`bibliography/verification-queue.md`](bibliography/verification-queue.md) |
-| See the whole repository at a glance | [The repository map](index.html) |
+| See the whole repository at a glance | [The repository map](https://wenareeba.github.io/outcome-harvesting/) |
 
-The lessons are interactive web pages. Until the course website is live, download the repository and open them in a browser; GitHub shows HTML files as code.
+The lessons, reference cards and repository map open as web pages on the course website, https://wenareeba.github.io/outcome-harvesting/. To use them offline, download the repository as a ZIP and open `index.html` in a browser.
 
 ## What is in the repository
 

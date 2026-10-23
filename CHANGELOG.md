@@ -2,6 +2,7 @@
 
 ## 2026-10-23
 
+- README links to Lesson 1, its reference card and the repository map now open the web pages on the course website instead of GitHub's code view.
 - Repository map: the hero now opens with the name, Outcome Harvesting, set large on two lines; the headline moves beneath it as a subtitle.
 - Lessons and reference cards restyled to match the repository map: a frosted top bar with the next step, a dark aubergine title band with the lesson number, title, lede and goal, then the light reading page, and a footer carrying the all-versions DOI. Section numbers zero-padded. No lesson text, quiz or citation changed.
 
