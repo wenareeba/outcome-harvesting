@@ -2,6 +2,9 @@
 
 ## 2026-10-23
 
+- Rights review. The README gains a Rights and permissions section: no third-party copies are held, quotations are short and page-cited, the course is independent, and rights holders can ask for any passage to be changed within seven days. The contributing guide forbids adding copies of copyrighted documents or links to unofficial copies.
+- Two verbatim definitions now carry quotation marks (Lesson 1, Wilson-Grau and Britt 2013, p. 2; Lesson 2, Wilson-Grau 2019, p. 170). Two passages labelled as paraphrase stayed too close to the book and are rewritten (Lesson 4, p. 57; Lesson 5, p. 99).
+- The verification queue no longer links a downloadable copy of a book chapter whose authorisation could not be confirmed; the citation stays.
 - README links to Lesson 1, its reference card and the repository map now open the web pages on the course website instead of GitHub's code view.
 - Repository map: the hero now opens with the name, Outcome Harvesting, set large on two lines; the headline moves beneath it as a subtitle.
 - Lessons and reference cards restyled to match the repository map: a frosted top bar with the next step, a dark aubergine title band with the lesson number, title, lede and goal, then the light reading page, and a footer carrying the all-versions DOI. Section numbers zero-padded. No lesson text, quiz or citation changed.

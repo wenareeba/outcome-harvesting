@@ -35,6 +35,8 @@ Issues and pull requests get a first reply within seven days. A confirmed citati
 - **Page-cited.** Any statement about what an author says carries a page number. Web pages without page numbers are cited by section.
 - **Exact quotations.** A quotation is word for word; otherwise paraphrase without quotation marks.
 - **Plain writing.** Short, direct sentences.
+- **No copies of copyrighted documents.** Never add a PDF, scan or excerpt-length copy of a book, article or report. Link to the publisher, the DOI, or a copy the author or publisher has posted, never to a file-sharing or unofficial copy.
+- **Short quotations only.** Quote only where the exact wording matters, keep it short, put it in quotation marks and give the page. Paraphrase everything else in your own words, not by changing a few words of the original.
 - **Nothing confidential.** No unpublished material shared in confidence, no private correspondence, no evaluation reports that are not public.
 
 ## Licensing of contributions
