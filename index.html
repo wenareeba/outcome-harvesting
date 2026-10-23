@@ -17,7 +17,7 @@
   --paper: #fbfbfa; --surface: #ffffff; --ink: #151216; --ink-2: #3d373e; --muted: #6a636b;
   --rule: #e5e0e5; --rule-strong: #c4bcc5;
   --accent: #5b3a5e; --accent-ink: #ffffff; --accent-wash: #f1e9f1;
-  --hero: #211726; --hero-ink: #f4eff4; --hero-muted: #b9a8bc; --hero-accent: #d9b8dc;
+  --hero: #211726; --hero-ink: #f4eff4; --hero-muted: #b9a8bc; --hero-accent: #d9b8dc; --hero-dim: #7d6a82;
   --hero-line: rgba(244, 239, 244, .06); --hero-rule: rgba(244, 239, 244, .16);
   --bar: rgba(251, 251, 250, .82);
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.38' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.32 0 0 0 0 0.3 0 0 0 0 0.31 0 0 0 0.055 0'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23f)'/%3E%3C/svg%3E");
@@ -66,11 +66,15 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 /* dark hero: flat colour, ledger rules */
 .hero { background-color: var(--hero); color: var(--hero-ink);
   background-image: repeating-linear-gradient(to bottom, transparent 0 43px, var(--hero-line) 43px 44px); }
-.hero-grid { padding-block: 5.5rem 0; display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: 4.5rem; align-items: center; }
+.hero-name { padding-block: 5rem 0; }
+.hero .name { font-family: var(--serif); font-weight: 700; font-size: clamp(3.9rem, 14.5vw, 11.5rem); line-height: .86; letter-spacing: -.045em; margin: 0; font-variation-settings: "opsz" 144; color: var(--hero-ink); }
+.hero .name span { display: block; }
+.hero .name span + span { color: var(--hero-dim); }
+.hero-grid { padding-block: 3.75rem 0; display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: 4.5rem; align-items: center; }
 .eyebrow { font-family: var(--mono); font-size: .8rem; letter-spacing: .02em; color: var(--hero-muted); margin: 0 0 1.6rem; }
-.hero h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(2.6rem, 5.9vw, 4.7rem); line-height: 1.02; letter-spacing: -.025em; margin: 0 0 1.7rem; font-variation-settings: "opsz" 144; }
-.hero h1 span { display: block; }
-.hero h1 span + span { font-style: italic; font-weight: 400; color: var(--hero-accent); }
+.thesis { font-family: var(--serif); font-weight: 600; font-size: clamp(1.9rem, 3.4vw, 2.7rem); line-height: 1.08; letter-spacing: -.02em; margin: 0 0 1.4rem; }
+.thesis span { display: block; }
+.thesis span + span { font-style: italic; font-weight: 400; color: var(--hero-accent); }
 .hero .lede { font-size: 1.24rem; line-height: 1.55; color: var(--hero-muted); max-width: 34rem; margin: 0 0 2.3rem; text-wrap: pretty; }
 .cta { display: flex; flex-wrap: wrap; align-items: center; gap: 1.4rem; }
 .btn { font-family: var(--sans); font-size: 1rem; font-weight: 600; padding: .78rem 1.4rem; border-radius: 999px; text-decoration: none; border: 1px solid transparent; display: inline-flex; align-items: center; gap: .45rem; cursor: pointer; transition: background .15s, border-color .15s, color .15s; }
@@ -98,7 +102,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .stats li:first-child { border-left: 0; padding-left: 0; }
 .stats b { display: block; font-family: var(--serif); font-weight: 300; font-size: clamp(2.4rem, 4.4vw, 3.3rem); line-height: 1; color: var(--hero-ink); font-variant-numeric: tabular-nums; margin-bottom: .5rem; }
 .stats span { font-size: .9rem; color: var(--hero-muted); line-height: 1.4; display: block; }
-@media (max-width: 960px) { .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 3rem; padding-top: 3.75rem; } .steps-fig { max-width: 30rem; } }
+@media (max-width: 960px) { .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 3rem; padding-top: 2.75rem; } .hero-name { padding-top: 3.5rem; } .steps-fig { max-width: 30rem; } }
 @media (max-width: 760px) {
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 3rem; }
   .stats li { padding: 1.3rem 1rem 1.5rem; }
@@ -247,10 +251,13 @@ h2 { font-family: var(--serif); font-weight: 600; font-size: clamp(1.9rem, 3.6vw
 
 <section class="hero" id="top">
   <div class="wrap">
+    <div class="hero-name">
+      <p class="eyebrow">A free course and library, version 1.1</p>
+      <h1 class="name"><span>Outcome</span><span>Harvesting</span></h1>
+    </div>
     <div class="hero-grid">
       <div>
-        <p class="eyebrow">A free course and library, version 1.1</p>
-        <h1><span>Start from what changed.</span><span>Trace how it was influenced.</span></h1>
+        <p class="thesis"><span>Start from what changed.</span><span>Trace how it was influenced.</span></p>
         <p class="lede">Eight lessons, five templates, a red team protocol and a bibliography checked at source. Every statement about what an author says carries a page number.</p>
         <div class="cta">
           <a class="btn btn-light" data-href="course/lessons/0001-what-a-harvest-is-for.html">Start lesson 1</a>
