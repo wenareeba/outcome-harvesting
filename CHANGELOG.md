@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-23
+
+- Lessons and reference cards restyled to match the repository map: a frosted top bar with the next step, a dark aubergine title band with the lesson number, title, lede and goal, then the light reading page, and a footer carrying the all-versions DOI. Section numbers zero-padded. No lesson text, quiz or citation changed.
+
 ## 2026-10-23 (version 1.1.0)
 
 - Repository map redesigned: a dark aubergine hero with the six steps (Wilson-Grau and Britt 2013, pp. 6 to 25) and the counts, then numbered sections on light paper: who it is for, the four parts, the route map, route cards, questions and a footer.
