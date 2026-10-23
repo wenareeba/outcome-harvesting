@@ -4,89 +4,169 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Outcome Harvesting Repo Map</title>
-<meta name="description" content="A map of the Outcome Harvesting repository: the course, templates, red team protocol and bibliography, with routes for different readers.">
 <meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="A free, page-cited library for Outcome Harvesting: an eight-lesson course, five templates, a red team protocol and a verified bibliography, with routes for different readers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Source+Sans+3:ital,wght@0,300..700;1,300..700&family=Source+Code+Pro:wght@400;500&display=swap">
 <style>
-/* Repository map: the course's palette and type, widened for a map. Header and route picker on top, the tree in a
-   soft panel with a sticky route panel beside it, then every route as a short list. Grey for the structure, one
-   aubergine accent for the chosen route. */
+/* Repository map. Dominant layer: a flat aubergine band ruled like a ledger (rows of harvested outcomes), carrying
+   the headline, the six steps drawn in hairlines, and the counts. Secondary layer: light textured paper with
+   numbered sections, verb titles, hairline panels and one aubergine accent. The frosted bar stays light. */
 :root {
-  --paper: #fbfbfa;
-  --surface: #ffffff;
-  --ink: #151216;
-  --ink-2: #3d373e;
-  --muted: #6a636b;
-  --rule: #e5e0e5;
-  --rule-strong: #948c95;
-  --accent: #5b3a5e;
-  --accent-ink: #ffffff;
-  --accent-wash: #f1e9f1;
-  --amber: #8a5300;
-  --amber-wash: #f6eddf;
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.38' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.32 0 0 0 0 0.3 0 0 0 0 0.31 0 0 0 0.055 0'/%3E%3C/filter%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.011' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.32 0 0 0 0 0.3 0 0 0 0 0.31 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23c)'/%3E%3Crect width='100%' height='100%' filter='url(%23f)'/%3E%3C/svg%3E");
+  --paper: #fbfbfa; --surface: #ffffff; --ink: #151216; --ink-2: #3d373e; --muted: #6a636b;
+  --rule: #e5e0e5; --rule-strong: #c4bcc5;
+  --accent: #5b3a5e; --accent-ink: #ffffff; --accent-wash: #f1e9f1;
+  --hero: #211726; --hero-ink: #f4eff4; --hero-muted: #b9a8bc; --hero-accent: #d9b8dc;
+  --hero-line: rgba(244, 239, 244, .06); --hero-rule: rgba(244, 239, 244, .16);
+  --bar: rgba(251, 251, 250, .82);
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.38' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.32 0 0 0 0 0.3 0 0 0 0 0.31 0 0 0 0.055 0'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23f)'/%3E%3C/svg%3E");
   --serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --sans: "Source Sans 3", "Source Sans Pro", "Segoe UI", system-ui, sans-serif;
   --mono: "Source Code Pro", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-  --measure: 39rem;
-  --margin: 15rem;
-  --gap: 3.5rem;
+  --wrap: 74rem;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --paper: #0f0f0f; --surface: #1c191d; --ink: #f1eef1; --ink-2: #cfc8d0; --muted: #9e969f;
-    --rule: #2e292f; --rule-strong: #6e6670; --accent: #c9a6cc; --accent-ink: #1c121d; --accent-wash: #2c1d2d;
-    --amber: #e3ad62; --amber-wash: #2e2414; --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.38' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.89 0 0 0 0 0.9 0 0 0 0.045 0'/%3E%3C/filter%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.011' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.89 0 0 0 0 0.9 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23c)'/%3E%3Crect width='100%' height='100%' filter='url(%23f)'/%3E%3C/svg%3E"); color-scheme: dark;
+    --rule: #2e292f; --rule-strong: #4a434c; --accent: #c9a6cc; --accent-ink: #1c121d; --accent-wash: #2c1d2d;
+    --hero: #1a1220; --bar: rgba(15, 15, 15, .82);
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.38' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.89 0 0 0 0 0.9 0 0 0 0.045 0'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23f)'/%3E%3C/svg%3E");
+    color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --paper: #0f0f0f; --surface: #1c191d; --ink: #f1eef1; --ink-2: #cfc8d0; --muted: #9e969f;
-  --rule: #2e292f; --rule-strong: #6e6670; --accent: #c9a6cc; --accent-ink: #1c121d; --accent-wash: #2c1d2d;
-  --amber: #e3ad62; --amber-wash: #2e2414; --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.38' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.89 0 0 0 0 0.9 0 0 0 0.045 0'/%3E%3C/filter%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.011' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.89 0 0 0 0 0.9 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23c)'/%3E%3Crect width='100%' height='100%' filter='url(%23f)'/%3E%3C/svg%3E"); color-scheme: dark;
+  --rule: #2e292f; --rule-strong: #4a434c; --accent: #c9a6cc; --accent-ink: #1c121d; --accent-wash: #2c1d2d;
+  --hero: #1a1220; --bar: rgba(15, 15, 15, .82);
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.38' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.89 0 0 0 0 0.9 0 0 0 0.045 0'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23f)'/%3E%3C/svg%3E");
+  color-scheme: dark;
 }
 *, *::before, *::after { box-sizing: border-box; }
-html { background: var(--paper); }
+html { background: var(--paper); scroll-padding-top: 5rem; }
 body { margin: 0; background: var(--paper) var(--grain); background-size: 360px; color: var(--ink); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
-.page { max-width: 76rem; margin: 0 auto; padding-block: 5rem 6rem; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
-@media (max-width: 760px) { .page { padding-block: 2.75rem 4rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); } }
-.kicker { font-size: .9rem; font-weight: 500; color: var(--muted); margin: 0 0 1.4rem; }
-.kicker b { color: var(--accent); font-weight: 600; }
-h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(2.4rem, 5.6vw, 3.9rem); line-height: 1.04; letter-spacing: -.02em; margin: 0 0 1.5rem; max-width: 22ch; text-wrap: balance; }
-.lede { font-family: var(--serif); font-size: 1.3rem; line-height: 1.5; color: var(--ink-2); margin: 0 0 1.5rem; max-width: 40rem; text-wrap: pretty; }
-.counts { font-size: .95rem; color: var(--muted); margin: 0 0 3.5rem; max-width: 46rem; }
-.counts b { color: var(--ink); font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; }
-h2 { font-family: var(--serif); font-weight: 600; font-size: 1.8rem; line-height: 1.18; letter-spacing: -.01em; margin: 0 0 .5rem; text-wrap: balance; }
-.sub { font-size: .95rem; color: var(--muted); margin: 0 0 1.25rem; }
-.picker { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.5rem; }
-.picker button { font: inherit; font-size: .9rem; font-weight: 500; padding: .6rem 1rem; border: 1px solid var(--rule-strong); border-radius: 6px; background: var(--surface); color: var(--ink-2); cursor: pointer; transition: border-color .15s, background .15s, color .15s; }
-.picker button:hover { border-color: var(--accent); color: var(--ink); }
-.picker button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
-.workspace { display: grid; grid-template-columns: minmax(0, 1fr) 20rem; gap: 1.5rem; align-items: start; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+@media (max-width: 760px) { .wrap { padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); } }
+
+/* frosted bar */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bar); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bar); -webkit-backdrop-filter: saturate(180%) blur(18px); backdrop-filter: saturate(180%) blur(18px); border-bottom: 1px solid var(--rule); }
+.bar .wrap { display: flex; align-items: center; gap: 1.6rem; height: 3.4rem; }
+.mark { font-family: var(--serif); font-weight: 600; font-size: 1.08rem; color: var(--ink); text-decoration: none; margin-right: auto; white-space: nowrap; }
+.bar nav { display: flex; gap: 1.4rem; font-size: .9rem; }
+.bar nav a { color: var(--ink-2); text-decoration: none; }
+.bar nav a:hover { color: var(--accent); }
+.pill { font-size: .85rem; font-weight: 600; padding: .4rem .95rem; border-radius: 999px; background: var(--ink); color: var(--paper); text-decoration: none; white-space: nowrap; }
+.pill:hover { background: var(--accent); color: var(--accent-ink); }
+@media (max-width: 820px) { .bar nav { display: none; } }
+
+/* dark hero: flat colour, ledger rules */
+.hero { background-color: var(--hero); color: var(--hero-ink);
+  background-image: repeating-linear-gradient(to bottom, transparent 0 43px, var(--hero-line) 43px 44px); }
+.hero-grid { padding-block: 5.5rem 0; display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: 4.5rem; align-items: center; }
+.eyebrow { font-family: var(--mono); font-size: .8rem; letter-spacing: .02em; color: var(--hero-muted); margin: 0 0 1.6rem; }
+.hero h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(2.6rem, 5.9vw, 4.7rem); line-height: 1.02; letter-spacing: -.025em; margin: 0 0 1.7rem; font-variation-settings: "opsz" 144; }
+.hero h1 span { display: block; }
+.hero h1 span + span { font-style: italic; font-weight: 400; color: var(--hero-accent); }
+.hero .lede { font-size: 1.24rem; line-height: 1.55; color: var(--hero-muted); max-width: 34rem; margin: 0 0 2.3rem; text-wrap: pretty; }
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 1.4rem; }
+.btn { font-family: var(--sans); font-size: 1rem; font-weight: 600; padding: .78rem 1.4rem; border-radius: 999px; text-decoration: none; border: 1px solid transparent; display: inline-flex; align-items: center; gap: .45rem; cursor: pointer; transition: background .15s, border-color .15s, color .15s; }
+.btn-light { background: var(--hero-ink); color: #211726; }
+.btn-light:hover { background: #ffffff; }
+.hero .textlink { color: var(--hero-ink); font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--hero-rule); padding-bottom: 2px; }
+.hero .textlink:hover { border-bottom-color: var(--hero-ink); }
+.steps-fig { margin: 0; border: 1px solid var(--hero-rule); border-radius: 4px; padding: 1.4rem 1.4rem 1rem; background: var(--hero); }
+.steps-fig svg { display: block; width: 100%; height: auto; }
+.steps-fig .f-line { stroke: var(--hero-rule); stroke-width: 1; fill: none; }
+.steps-fig .f-box { fill: none; stroke: var(--hero-rule); stroke-width: 1; }
+.steps-fig .f-key { fill: var(--hero-accent); }
+.steps-fig .f-num { font-family: var(--mono); font-size: 11px; fill: var(--hero-muted); }
+.steps-fig .f-txt { font-family: var(--sans); font-size: 14px; fill: var(--hero-ink); }
+.steps-fig .f-pg { font-family: var(--mono); font-size: 10.5px; fill: var(--hero-muted); text-anchor: end; }
+.steps-fig .f-key-num { font-family: var(--mono); font-size: 11px; fill: #211726; opacity: .7; }
+.steps-fig .f-key-txt { font-family: var(--sans); font-size: 14px; font-weight: 600; fill: #211726; }
+.steps-fig .f-key-pg { font-family: var(--mono); font-size: 10.5px; fill: #211726; opacity: .7; text-anchor: end; }
+.steps-fig .dot { fill: var(--hero-muted); }
+.steps-fig .dot-key { fill: var(--hero-accent); }
+.steps-fig figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .3rem 1rem; margin-top: .9rem; padding-top: .8rem; border-top: 1px solid var(--hero-rule); font-size: .82rem; color: var(--hero-muted); }
+.steps-fig figcaption b { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 1rem; color: var(--hero-ink); }
+.stats { list-style: none; margin: 4.75rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--hero-rule); }
+.stats li { padding: 1.5rem 1.25rem 2.6rem; border-left: 1px solid var(--hero-rule); }
+.stats li:first-child { border-left: 0; padding-left: 0; }
+.stats b { display: block; font-family: var(--serif); font-weight: 300; font-size: clamp(2.4rem, 4.4vw, 3.3rem); line-height: 1; color: var(--hero-ink); font-variant-numeric: tabular-nums; margin-bottom: .5rem; }
+.stats span { font-size: .9rem; color: var(--hero-muted); line-height: 1.4; display: block; }
+@media (max-width: 960px) { .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 3rem; padding-top: 3.75rem; } .steps-fig { max-width: 30rem; } }
+@media (max-width: 760px) {
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 3rem; }
+  .stats li { padding: 1.3rem 1rem 1.5rem; }
+  .stats li:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .stats li:nth-child(n+3) { border-top: 1px solid var(--hero-rule); }
+}
+
+/* light paper sections */
+section.sec { padding-block: 6rem 0; }
+@media (max-width: 760px) { section.sec { padding-top: 4rem; } }
+.head { max-width: 44rem; margin: 0 0 2.5rem; }
+.head .no { font-family: var(--mono); font-size: .8rem; color: var(--muted); display: block; margin-bottom: .8rem; }
+h2 { font-family: var(--serif); font-weight: 600; font-size: clamp(1.9rem, 3.6vw, 2.6rem); line-height: 1.1; letter-spacing: -.02em; margin: 0 0 .8rem; text-wrap: balance; }
+.head p { color: var(--ink-2); margin: 0; font-size: 1.08rem; text-wrap: pretty; }
+.label { font-family: var(--mono); font-size: .76rem; font-weight: 500; color: var(--muted); letter-spacing: .02em; margin: 0 0 .7rem; display: block; }
+
+.who-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--rule-strong); }
+.who-grid > div { padding: 1.6rem 1.75rem 1.8rem; border-left: 1px solid var(--rule); min-width: 0; }
+.who-grid > div:first-child { border-left: 0; padding-left: 0; }
+.who-grid h3 { font-family: var(--serif); font-weight: 600; font-size: 1.3rem; line-height: 1.25; margin: 0 0 .7rem; }
+.who-grid ul { margin: 0; padding-left: 1.1rem; display: grid; gap: .45rem; color: var(--ink-2); }
+.who-grid p { margin: 0; color: var(--ink-2); }
+.free { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: 1.5rem; margin-top: 1.75rem; max-width: 52rem; }
+.free p { margin: 0; color: var(--ink-2); }
+.free .label { margin: .2rem 0 0; }
+@media (max-width: 860px) {
+  .who-grid { grid-template-columns: minmax(0, 1fr); }
+  .who-grid > div { border-left: 0; padding-left: 0; padding-right: 0; border-top: 1px solid var(--rule); }
+  .who-grid > div:first-child { border-top: 0; }
+  .free { grid-template-columns: minmax(0, 1fr); gap: .3rem; }
+}
+
+.tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.tile { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 2rem 2rem 1.75rem; display: flex; flex-direction: column; min-width: 0; }
+.tile .path { font-family: var(--mono); font-size: .8rem; color: var(--muted); margin: 0 0 1.1rem; display: flex; justify-content: space-between; gap: 1rem; }
+.tile h3 { font-family: var(--serif); font-weight: 600; font-size: 2.1rem; letter-spacing: -.02em; line-height: 1.1; margin: 0 0 .7rem; }
+.tile p { margin: 0 0 1.4rem; color: var(--ink-2); }
+.tile .open { margin-top: auto; font-weight: 600; text-decoration: none; }
+.tile .open:hover { text-decoration: underline; }
+@media (max-width: 760px) { .tiles { grid-template-columns: minmax(0, 1fr); } .tile { padding: 1.5rem 1.4rem; } }
+
+/* routes */
+.seg-scroll { overflow-x: auto; margin: 0 0 1.25rem; padding-bottom: .3rem; }
+.seg { display: inline-flex; gap: 2px; padding: 3px; border-radius: 12px; background: var(--rule); }
+.seg button { font-family: var(--sans); font-size: .92rem; font-weight: 500; white-space: nowrap; padding: .5rem 1rem; border: 0; border-radius: 9px; background: transparent; color: var(--ink-2); cursor: pointer; transition: background .15s, color .15s, box-shadow .15s; }
+.seg button:hover { color: var(--ink); }
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px rgba(33, 23, 38, .16); }
+.workspace { display: grid; grid-template-columns: minmax(0, 1fr) 20rem; gap: 1.25rem; align-items: start; }
 @media (max-width: 1000px) { .workspace { grid-template-columns: minmax(0, 1fr); } }
-.mapbox { background: var(--accent-wash); border-radius: 12px; padding: 1.25rem; overflow-x: auto; min-width: 0; }
-svg { display: block; width: 100%; height: auto; min-width: 640px; }
+.mapbox { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 1.25rem; overflow-x: auto; min-width: 0; }
+#map { display: block; width: 100%; height: auto; min-width: 640px; }
 .edge { fill: none; stroke: var(--rule-strong); stroke-width: 1.3; transition: opacity .2s, stroke .2s; }
 .edge.on { stroke: var(--accent); stroke-width: 2.2; }
 .node { cursor: pointer; transition: opacity .2s; }
-.node rect.box { fill: var(--surface); stroke: var(--rule-strong); stroke-width: 1.2; transition: stroke .2s, fill .2s; }
+.node rect.box { fill: var(--paper); stroke: var(--rule-strong); stroke-width: 1.1; transition: stroke .2s, fill .2s; }
 .node text { font-family: var(--sans); font-size: 13px; fill: var(--ink); }
 .node .meta { font-family: var(--mono); font-size: 10.5px; fill: var(--muted); }
 .node.branch text.lbl { font-weight: 600; font-size: 14px; }
 .node.root text.lbl { font-family: var(--serif); font-weight: 600; font-size: 17px; }
-.node.root rect.box { stroke: var(--ink); stroke-width: 1.6; }
+.node.root rect.box { stroke: var(--ink); stroke-width: 1.5; }
 .node:hover rect.box { stroke: var(--accent); }
-.node.on rect.box { stroke: var(--accent); stroke-width: 1.8; }
+.node.on rect.box { stroke: var(--accent); stroke-width: 1.7; }
 .node.picked rect.box { fill: var(--accent); stroke: var(--accent); }
 .node.picked text { fill: var(--accent-ink); }
 .badge circle { fill: var(--accent); }
 .badge text { fill: var(--accent-ink); font-size: 11px; font-weight: 600; text-anchor: middle; font-family: var(--mono); }
 .dimmed .node:not(.on):not(.picked), .dimmed .edge:not(.on) { opacity: .3; }
-.side { position: sticky; top: 1.5rem; background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 1.3rem 1.4rem; font-size: .95rem; min-width: 0; }
+.side { position: sticky; top: 4.6rem; background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 1.3rem 1.4rem; font-size: .96rem; min-width: 0; }
 @media (max-width: 1000px) { .side { position: static; } }
 .side h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; line-height: 1.2; margin: 0 0 .3rem; }
 .side .who { color: var(--muted); margin: 0 0 1rem; }
@@ -95,46 +175,196 @@ svg { display: block; width: 100%; height: auto; min-width: 640px; }
 .detail { border-top: 1px solid var(--rule); padding-top: 1rem; margin-top: .5rem; }
 .detail .where { font-family: var(--mono); font-size: .78rem; color: var(--muted); margin: 0 0 .2rem; }
 .detail .name { font-family: var(--serif); font-size: 1.12rem; font-weight: 600; margin: 0 0 .35rem; }
-.routes { margin-top: 5rem; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr)); gap: 1rem; }
-.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 1.2rem 1.3rem; font-size: .93rem; min-width: 0; }
-.card h3 { font-family: var(--serif); font-weight: 600; font-size: 1.2rem; margin: 0 0 .15rem; }
-.card .who { color: var(--muted); margin: 0 0 .8rem; }
-.card ol { margin: 0; padding-left: 1.2rem; display: grid; gap: .3rem; }
-.foot { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: .88rem; color: var(--muted); max-width: 46rem; }
-@media (prefers-reduced-motion: reduce) { .edge, .node, .picker button { transition: none; } }
-</style>
 
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+@media (max-width: 1000px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .cards { grid-template-columns: minmax(0, 1fr); } }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 1.4rem 1.5rem 1.3rem; display: flex; flex-direction: column; min-width: 0; }
+.card h3 { font-family: var(--serif); font-weight: 600; font-size: 1.3rem; line-height: 1.2; margin: 0 0 .25rem; }
+.card .who { color: var(--muted); margin: 0 0 .9rem; font-size: .95rem; }
+.meta-line { list-style: none; margin: 0 0 1rem; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+.meta-line li { font-family: var(--mono); font-size: .74rem; color: var(--ink-2); border: 1px solid var(--rule); border-radius: 3px; padding: .12rem .45rem; }
+.card details { margin: 0 0 1.1rem; font-size: .95rem; }
+.card summary { cursor: pointer; color: var(--ink-2); font-weight: 500; }
+.card details ol { margin: .6rem 0 0; padding-left: 1.2rem; display: grid; gap: .3rem; }
+.actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; align-items: center; padding-top: .9rem; border-top: 1px solid var(--rule); font-size: .92rem; }
+.actions a { font-weight: 600; text-decoration: none; }
+.actions a:hover { text-decoration: underline; }
+.linkbtn { font: inherit; font-weight: 500; color: var(--ink-2); background: none; border: 0; padding: 0; cursor: pointer; border-bottom: 1px solid var(--rule-strong); }
+.linkbtn:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* questions */
+.faq { border-top: 1px solid var(--rule-strong); max-width: 52rem; }
+.faq details { border-bottom: 1px solid var(--rule); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; gap: 1.5rem; padding: 1.15rem 0; font-family: var(--serif); font-weight: 500; font-size: 1.2rem; line-height: 1.35; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--sans); font-weight: 300; font-size: 1.5rem; line-height: 1; color: var(--muted); transition: transform .2s; flex: none; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq .ans { padding: 0 0 1.3rem; color: var(--ink-2); max-width: 44rem; }
+.faq .ans p { margin: 0 0 .7rem; }
+.cite-box { font-family: var(--serif); font-size: 1rem; background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: .9rem 1rem; margin: .4rem 0 .6rem; overflow-wrap: anywhere; color: var(--ink); }
+.copy { font: inherit; font-size: .88rem; font-weight: 600; padding: .38rem .9rem; border-radius: 999px; border: 1px solid var(--rule-strong); background: transparent; color: var(--ink); cursor: pointer; }
+.copy:hover { border-color: var(--ink); }
+.doi { font-family: var(--mono); font-size: .92em; }
+
+/* next steps */
+.next { margin-top: 6rem; background: var(--accent-wash); }
+.next .wrap { padding-block: 3.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem 3rem; }
+.next h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); margin: 0 0 .4rem; }
+.next p { margin: 0; color: var(--ink-2); max-width: 36rem; }
+.next .cta { gap: .8rem; }
+.btn-ink { background: var(--ink); color: var(--paper); }
+.btn-ink:hover { background: var(--accent); color: var(--accent-ink); }
+.btn-ghost { border-color: var(--rule-strong); color: var(--ink); background: transparent; }
+.btn-ghost:hover { border-color: var(--ink); }
+
+/* footer */
+.foot { padding-block: 4rem 2.5rem; }
+.cols { display: grid; grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr)); gap: 2rem; font-size: .93rem; }
+.cols p { margin: 0; color: var(--ink-2); max-width: 22rem; }
+.cols h3 { font-family: var(--mono); font-size: .76rem; font-weight: 500; color: var(--muted); margin: 0 0 .8rem; }
+.cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; }
+.cols a { color: var(--ink-2); text-decoration: none; }
+.cols a:hover { color: var(--accent); }
+@media (max-width: 860px) { .cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } .cols > div:first-child { grid-column: 1 / -1; } }
+.bigtype { font-family: var(--serif); font-weight: 600; font-size: clamp(2.9rem, 11vw, 9.6rem); line-height: .92; letter-spacing: -.04em; color: var(--ink); margin: 4rem 0 1.5rem; font-variation-settings: "opsz" 144; }
+.bigtype span { font-style: italic; font-weight: 300; color: var(--rule-strong); }
+.legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .6rem 2rem; font-size: .82rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 1.25rem; margin: 0; }
+.legal a { color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
 </head>
 <body>
-<main class="page">
-  <p class="kicker"><b>Outcome Harvesting</b>, repository map</p>
-  <h1>Find your way through the repository</h1>
-  <p class="lede">The repository has four working parts. The course teaches the method, the templates apply it, the red team protocol checks it, and the bibliography backs every claim. Pick a route and the map lights up the order to use them in.</p>
-  <p class="counts"><b>8</b> lessons with <b>8</b> reference cards. <b>16</b> sources, each verified at source, in <b>6</b> sections. <b>5</b> templates. A protocol of <b>33</b> checks, <b>8</b> of them critical.</p>
-
-  <h2 id="routes-h">Choose a route</h2>
-  <p class="sub">Each route is an order of work for one kind of reader. Select a box in the map to see what it holds.</p>
-  <div class="picker" id="picker" role="group" aria-labelledby="routes-h"></div>
-
-  <div class="workspace">
-    <div class="mapbox"><svg id="map" role="img" aria-label="Tree of the repository: course, templates, red team protocol, bibliography and repository files"></svg></div>
-    <aside class="side" id="side" aria-live="polite"></aside>
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top">Outcome Harvesting</a>
+    <nav aria-label="Sections">
+      <a href="#parts">Parts</a><a href="#routes">Routes</a><a href="#questions">Questions</a><a href="#cite">Cite</a>
+    </nav>
+    <a class="pill" data-href="course/lessons/0001-what-a-harvest-is-for.html">Start lesson 1</a>
   </div>
+</header>
 
-  <section class="routes" aria-labelledby="all-h">
-    <h2 id="all-h">Every route at a glance</h2>
-    <p class="sub">The same routes as lists, for reading on a phone or printing.</p>
-    <div class="grid" id="cards"></div>
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">A free course and library, version 1.1</p>
+        <h1><span>Start from what changed.</span><span>Trace how it was influenced.</span></h1>
+        <p class="lede">Eight lessons, five templates, a red team protocol and a bibliography checked at source. Every statement about what an author says carries a page number.</p>
+        <div class="cta">
+          <a class="btn btn-light" data-href="course/lessons/0001-what-a-harvest-is-for.html">Start lesson 1</a>
+          <a class="textlink" href="#routes">or choose a route</a>
+        </div>
+      </div>
+      <figure class="steps-fig" aria-labelledby="fig-c">
+        <svg viewBox="0 0 360 292" role="img" aria-labelledby="fig-t">
+          <title id="fig-t">The six steps of a harvest: design the harvest; review documentation; engage with change agents; substantiate; analyse and interpret; support use of findings.</title>
+          <path class="f-line" d="M14 22 V268"/>
+          <g><path class="f-line" d="M14 22 H30"/><circle class="dot" cx="14" cy="22" r="3"/><rect class="f-box" x="30" y="4" width="326" height="36" rx="3"/><text class="f-num" x="42" y="26">01</text><text class="f-txt" x="68" y="27">Design the harvest</text><text class="f-pg" x="344" y="26">p. 6</text></g>
+          <g><path class="f-line" d="M14 66 H30"/><circle class="dot" cx="14" cy="66" r="3"/><rect class="f-box" x="30" y="48" width="326" height="36" rx="3"/><text class="f-num" x="42" y="70">02</text><text class="f-txt" x="68" y="71">Review documentation</text><text class="f-pg" x="344" y="70">p. 10</text></g>
+          <g><path class="f-line" d="M14 110 H30"/><circle class="dot" cx="14" cy="110" r="3"/><rect class="f-box" x="30" y="92" width="326" height="36" rx="3"/><text class="f-num" x="42" y="114">03</text><text class="f-txt" x="68" y="115">Engage with change agents</text><text class="f-pg" x="344" y="114">p. 13</text></g>
+          <g><path class="f-line" d="M14 154 H30"/><circle class="dot" cx="14" cy="154" r="3"/><rect class="f-box" x="30" y="136" width="326" height="36" rx="3"/><text class="f-num" x="42" y="158">04</text><text class="f-txt" x="68" y="159">Substantiate</text><text class="f-pg" x="344" y="158">p. 18</text></g>
+          <g><path class="f-line" d="M14 198 H30"/><circle class="dot" cx="14" cy="198" r="3"/><rect class="f-box" x="30" y="180" width="326" height="36" rx="3"/><text class="f-num" x="42" y="202">05</text><text class="f-txt" x="68" y="203">Analyse and interpret</text><text class="f-pg" x="344" y="202">p. 21</text></g>
+          <g><path class="f-line" d="M14 246 H30"/><circle class="dot-key" cx="14" cy="246" r="4"/><rect class="f-key" x="30" y="226" width="326" height="40" rx="3"/><text class="f-key-num" x="42" y="250">06</text><text class="f-key-txt" x="68" y="251">Support use of findings</text><text class="f-key-pg" x="344" y="250">p. 25</text></g>
+        </svg>
+        <figcaption id="fig-c"><b>Six steps, one harvest.</b><span>Wilson-Grau and Britt 2013</span></figcaption>
+      </figure>
+    </div>
+    <ul class="stats" aria-label="What the repository holds">
+      <li><b>8</b><span>lessons, each with a reference card</span></li>
+      <li><b>16</b><span>sources, each verified at source</span></li>
+      <li><b>5</b><span>templates keyed to the six steps</span></li>
+      <li><b>33</b><span>red team checks, 8 of them critical</span></li>
+    </ul>
+  </div>
+</section>
+
+<main>
+  <section class="sec wrap" aria-labelledby="who-h">
+    <div class="head"><span class="no">01</span><h2 id="who-h">Who this is for</h2><p>The library assumes you want to use the method, not only read about it. Here is what it expects of you.</p></div>
+    <div class="who-grid">
+      <div><span class="label">Who it is for</span><h3>People who run, commission or study a harvest</h3>
+        <ul><li>Evaluators designing or running a harvest</li><li>Commissioners and reviewers judging whether a report stands up</li><li>Students and researchers learning the method</li></ul></div>
+      <div><span class="label">Before you start</span><h3>No prior Outcome Harvesting</h3>
+        <p>Lesson 1 starts from what a harvest is for, and each lesson defines its terms with page citations. Some evaluation experience helps with the applied questions.</p></div>
+      <div><span class="label">What it asks of you</span><h3>Work, not just reading</h3>
+        <p>Each lesson has recall questions, one interactive figure, five applied questions and a writing task with a model answer.</p></div>
+    </div>
+    <div class="free"><span class="label">Why it is free</span><p>Most Outcome Harvesting training is paid, and the free material is scattered. This library gathers it in one place, cites every page, and corrects itself in public when someone finds an error.</p></div>
   </section>
 
-  <p class="foot">On the course website, lessons and cards open as interactive pages; other files open on GitHub.</p>
+  <section class="sec wrap" id="parts" aria-labelledby="parts-h">
+    <div class="head"><span class="no">02</span><h2 id="parts-h">Learn it. Run it. Check it.</h2><p>Four parts, one method. The course teaches it, the templates apply it, the protocol checks it, and the bibliography backs every claim.</p></div>
+    <div class="tiles">
+      <article class="tile"><p class="path"><span>Course</span><span>course/</span></p><h3>Learn.</h3><p>Eight lessons with reference cards, 64 quiz questions, and writing tasks with model answers. Each lesson opens with recall questions from the last.</p><a class="open" data-href="course/lessons/0001-what-a-harvest-is-for.html">Open lesson 1 ›</a></article>
+      <article class="tile"><p class="path"><span>Templates</span><span>templates/</span></p><h3>Design.</h3><p>A harvest design template, an outcome description sheet, a substantiation plan, an analysis matrix and a report checklist, keyed to the six steps.</p><a class="open" data-href="templates/oh-harvest-design-template.md">Open the design template ›</a></article>
+      <article class="tile"><p class="path"><span>Red team protocol</span><span>red-team/</span></p><h3>Check.</h3><p>33 checks for a harvest design or a draft report, 8 of them critical, each tied to the page it rests on. Ends with five verification questions and a verdict scale.</p><a class="open" data-href="red-team/oh-red-team-protocol.md">Open the protocol ›</a></article>
+      <article class="tile"><p class="path"><span>Bibliography</span><span>bibliography/</span></p><h3>Read further.</h3><p>16 verified sources in six sections, with BibTeX, an errata page for details that differ between sources, and a queue of four still being checked.</p><a class="open" data-href="bibliography/annotated-bibliography.md">Open the bibliography ›</a></article>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="routes" aria-labelledby="routes-h">
+    <div class="head"><span class="no">03</span><h2 id="routes-h">Choose a route</h2><p>Each route is an order of work for one kind of reader. Select a box in the map to see what it holds.</p></div>
+    <div class="seg-scroll"><div class="seg" id="picker" role="group" aria-labelledby="routes-h"></div></div>
+    <div class="workspace">
+      <div class="mapbox"><svg id="map" role="img" aria-label="Tree of the repository: course, templates, red team protocol, bibliography and repository files"></svg></div>
+      <aside class="side" id="side" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section class="sec wrap" aria-labelledby="all-h">
+    <div class="head"><span class="no">04</span><h2 id="all-h">Every route at a glance</h2><p>The same routes as cards, for reading on a phone or printing.</p></div>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section class="sec wrap" id="questions" aria-labelledby="faq-h">
+    <div class="head"><span class="no">05</span><h2 id="faq-h">Questions</h2></div>
+    <div class="faq">
+      <details><summary>Do I need to know Outcome Harvesting already?</summary><div class="ans"><p>No. Lesson 1 starts from what a harvest is for and where the method stops. Each later lesson opens with recall questions from the one before, so work through them in order.</p></div></details>
+      <details><summary>How were the sources checked?</summary><div class="ans"><p>A source enters the bibliography only once its title, year and pages, or report series, are confirmed in the document itself or at the publisher, repository or Crossref. Quotations are matched word for word against the source text. Where sources disagree on a citation detail, the <a data-href="bibliography/errata.md">errata page</a> shows the evidence.</p></div></details>
+      <details><summary>Can I use it offline?</summary><div class="ans"><p>Yes. On GitHub, choose Code, then Download ZIP. Unzip it and open <span class="doi">index.html</span> in a browser; the lessons and cards work without a connection, with system fonts in place of the web fonts.</p></div></details>
+      <details><summary>Can I reuse it in my own teaching?</summary><div class="ans"><p>Yes, with credit. Written material is licensed CC BY 4.0, so you may share and adapt it, including commercially. The code is MIT. Passages quoted from Wilson-Grau and Britt (2013) and Wilson-Grau (2019) stay under their own copyright.</p></div></details>
+      <details id="cite"><summary>How do I cite it?</summary><div class="ans">
+        <p>Cite the all-versions DOI, <a class="doi" href="https://doi.org/10.5281/zenodo.23514918">10.5281/zenodo.23514918</a>. It always resolves to the latest version, so the citation stays current as corrections are made.</p>
+        <p class="cite-box" id="cite-text">Wenareeba, Morris. (2026). <em>Outcome Harvesting: Course, Bibliography, Templates and Red Team Protocol</em>. Zenodo. https://doi.org/10.5281/zenodo.23514918</p>
+        <button type="button" class="copy" id="copy-cite">Copy citation</button>
+        <p style="margin-top:.9rem">GitHub's Cite this repository button gives the same reference from <a data-href="CITATION.cff">CITATION.cff</a>.</p>
+      </div></details>
+      <details><summary>I found an error. What do I do?</summary><div class="ans"><p>Open an issue with the Report a citation error form, or comment where you found the link. You get a first reply within seven days. A confirmed error is corrected within fourteen days and logged in the <a data-href="CHANGELOG.md">changelog</a>.</p></div></details>
+    </div>
+  </section>
 </main>
+
+<section class="next" aria-labelledby="next-h">
+  <div class="wrap">
+    <div><h2 id="next-h">Help keep it accurate.</h2><p>Check a page citation against your copy of the book, suggest a published harvest, or tell us where a lesson is unclear.</p></div>
+    <div class="cta">
+      <a class="btn btn-ink" href="https://github.com/wenareeba/outcome-harvesting/issues/new/choose">Open an issue</a>
+      <a class="btn btn-ghost" data-href="CONTRIBUTING.md">Contributing guide</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot wrap">
+  <div class="cols">
+    <div><h3>About</h3><p>A free, page-cited library for Outcome Harvesting. Independent work by Morris Wenareeba; the method belongs to the late Ricardo Wilson-Grau and colleagues, and nobody has endorsed this library.</p></div>
+    <div><h3>Course</h3><ul><li><a data-href="course/lessons/0001-what-a-harvest-is-for.html">Lesson 1</a></li><li><a data-href="course/reference/0001-oh-core.html">Reference cards</a></li><li><a href="#routes">Routes</a></li></ul></div>
+    <div><h3>Library</h3><ul><li><a data-href="templates/oh-harvest-design-template.md">Templates</a></li><li><a data-href="red-team/oh-red-team-protocol.md">Red team protocol</a></li><li><a data-href="bibliography/annotated-bibliography.md">Bibliography</a></li><li><a data-href="bibliography/errata.md">Errata</a></li></ul></div>
+    <div><h3>Repository</h3><ul><li><a href="https://github.com/wenareeba/outcome-harvesting">GitHub</a></li><li><a data-href="CONTRIBUTING.md">Contributing</a></li><li><a data-href="CHANGELOG.md">Changelog</a></li><li><a href="https://doi.org/10.5281/zenodo.23514918">Zenodo record</a></li></ul></div>
+  </div>
+  <p class="bigtype" aria-hidden="true">Outcome <span>Harvesting</span></p>
+  <p class="legal"><span>Written material CC BY 4.0. Code MIT.</span><span>DOI <a class="doi" href="https://doi.org/10.5281/zenodo.23514918">10.5281/zenodo.23514918</a>, all versions</span></p>
+</footer>
 
 <script>
 const REPO = "https://github.com/wenareeba/outcome-harvesting/blob/main/";
-const ON_SITE = /github\.io$/.test(location.hostname);
-const href = p => (ON_SITE && /\.html$/.test(p)) ? p : REPO + p;
+const SITE = "https://wenareeba.github.io/outcome-harvesting/";
+const LOCAL = /github\.io$/.test(location.hostname) || location.protocol === "file:";
+// HTML pages open as web pages (relative on the site or offline, otherwise on the course website); other files open on GitHub.
+const href = p => /\.html$/.test(p) ? (LOCAL ? p : SITE + p) : REPO + p;
+document.querySelectorAll("[data-href]").forEach(a => { a.href = href(a.dataset.href); });
+
 const N = [
   {id:"root", label:"Outcome Harvesting", g:"root", href:"README.md", note:"Start at the README: what Outcome Harvesting is, who the repository is for, and a start-here table."},
   {id:"course", label:"Course", sub:"course/", g:"course", p:"root", note:"Eight lessons. Each opens with recall questions from the last one, has one interactive figure, ends with applied questions and a writing task with a model answer, and links to a one-page reference card."},
@@ -174,9 +404,9 @@ const N = [
   {id:"queue", label:"Verification queue (4)", g:"bib", p:"bib", href:"bibliography/verification-queue.md", note:"Sources held back until their details can be confirmed."},
 
   {id:"repo", label:"Repo files", g:"repo", p:"root", note:"What a public repository needs: how to cite, contribute and reuse."},
-  {id:"readme", label:"README", g:"repo", p:"repo", href:"README.md", note:"Overview, start-here table and status."},
+  {id:"readme", label:"README", g:"repo", p:"repo", href:"README.md", note:"Overview and a start-here table."},
   {id:"contrib", label:"Contributing and issue forms", g:"repo", p:"repo", href:"CONTRIBUTING.md", note:"How to suggest a source, report a citation error or propose a change."},
-  {id:"cite", label:"CITATION.cff", g:"repo", p:"repo", href:"CITATION.cff", note:"GitHub's Cite this repository button reads this file."},
+  {id:"cite", label:"CITATION.cff", g:"repo", p:"repo", href:"CITATION.cff", note:"GitHub's Cite this repository button reads this file. Cite the all-versions DOI, 10.5281/zenodo.23514918."},
   {id:"lic", label:"Licences", sub:"CC BY 4.0 · MIT", g:"repo", p:"repo", href:"LICENSE", note:"Written material under CC BY 4.0; the bibliography script and lesson code under MIT."},
 ];
 const PATHS = [
@@ -191,7 +421,7 @@ const PATHS = [
   {id:"read", name:"Find the right reading", who:"students and researchers", steps:["start","s1","s2","s3","s4","s5","s6","errata","bibtex"],
    tip:"Start with the five reads, then go section by section. Check the errata before you cite."},
   {id:"contribute", name:"Cite or contribute", who:"anyone reusing the material", steps:["readme","cite","lic","contrib","queue"],
-   tip:"Cite from CITATION.cff, reuse under the licences, and suggest sources through the issue forms."},
+   tip:"Cite the all-versions DOI, reuse under the licences, and suggest sources through the issue forms."},
 ];
 const byId = Object.fromEntries(N.map(n => [n.id, n]));
 const W = 850, rowH = 32, X = [12, 236, 486], BW = [196, 204, 316];
@@ -219,7 +449,7 @@ N.forEach(n => {
 N.forEach(n => {
   const d = depth(n), p = pos[n.id], w = BW[d], h = d === 2 ? 26 : d === 1 ? 40 : 46;
   const g = el("g", {class: "node " + ["root", "branch", "leaf"][d], transform: `translate(${p.x},${p.y - h / 2})`, tabindex: 0, role: "button", "aria-label": n.label});
-  el("rect", {class: "box", width: w, height: h, rx: d === 2 ? 6 : 8}, g);
+  el("rect", {class: "box", width: w, height: h, rx: d === 2 ? 4 : 5}, g);
   const two = d < 2 && n.sub;
   el("text", {class: "lbl", x: 12, y: d === 2 ? 17.5 : two ? 17 : h / 2 + 6}, g).textContent = n.label;
   if (n.sub) el("text", d === 2 ? {class: "meta", x: w - 10, y: 17.5, "text-anchor": "end"} : {class: "meta", x: 12, y: 32}, g).textContent = n.sub;
@@ -231,7 +461,7 @@ N.forEach(n => {
   g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); } });
 });
 const label = n => n.label.replace(/^(\d) · /, "Lesson $1: ");
-const link = n => n.href ? `<a href="${href(n.href)}" target="_blank" rel="noopener">${label(n)}</a>` : label(n);
+const link = n => n.href ? `<a href="${href(n.href)}">${label(n)}</a>` : label(n);
 const side = document.getElementById("side");
 const current = {route: "learn", node: null};
 function draw() {
@@ -264,7 +494,23 @@ PATHS.forEach(p => {
   b.addEventListener("click", () => { current.route = current.route === p.id ? null : p.id; current.node = null; draw(); });
   picker.appendChild(b);
 });
-document.getElementById("cards").innerHTML = PATHS.map(p => `<article class="card"><h3>${p.name}</h3><p class="who">For ${p.who}</p><ol>${p.steps.map(s => `<li>${link(byId[s])}</li>`).join("")}</ol></article>`).join("");
+document.getElementById("cards").innerHTML = PATHS.map(p => {
+  const n0 = byId[p.steps[0]];
+  return `<article class="card"><h3>${p.name}</h3><p class="who">For ${p.who}</p>
+  <ul class="meta-line"><li>${p.steps.length} steps</li><li>Starts with ${label(n0)}</li></ul>
+  <details><summary>See the steps</summary><ol>${p.steps.map(s => `<li>${link(byId[s])}</li>`).join("")}</ol></details>
+  <div class="actions">${n0.href ? `<a href="${href(n0.href)}">Start the route ›</a>` : ""}<button type="button" class="linkbtn" data-show="${p.id}">Show on the map</button></div></article>`;
+}).join("");
+document.querySelectorAll("[data-show]").forEach(b => b.addEventListener("click", () => {
+  current.route = b.dataset.show; current.node = null; draw();
+  document.getElementById("routes").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+}));
+document.getElementById("copy-cite").addEventListener("click", e => {
+  const t = document.getElementById("cite-text"), btn = e.currentTarget;
+  const done = () => { btn.textContent = "Copied"; setTimeout(() => { btn.textContent = "Copy citation"; }, 1800); };
+  const fallback = () => { const r = document.createRange(); r.selectNodeContents(t); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = "Selected, press Ctrl+C"; };
+  try { navigator.clipboard.writeText(t.textContent).then(done, fallback); } catch (err) { fallback(); }
+});
 draw();
 </script>
 </body>

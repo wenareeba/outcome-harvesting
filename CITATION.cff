@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this material, please cite it as below."
 type: dataset
-title: "Outcome Harvesting: course, bibliography, templates and red team protocol"
+title: "Outcome Harvesting: Course, Bibliography, Templates and Red Team Protocol"
 authors:
   - family-names: Wenareeba
     given-names: Morris
@@ -29,5 +29,5 @@ keywords:
   - utilization-focused evaluation
   - contribution
 license: CC-BY-4.0
-date-released: "2026-10-21"
-version: "1.0.0"
+date-released: "2026-10-23"
+version: "1.1.0"

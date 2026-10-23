@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-23 (version 1.1.0)
+
+- Repository map redesigned: a dark aubergine hero with the six steps (Wilson-Grau and Britt 2013, pp. 6 to 25) and the counts, then numbered sections on light paper: who it is for, the four parts, the route map, route cards, questions and a footer.
+- Every citation now points to the all-versions DOI, 10.5281/zenodo.23514918, which always resolves to the latest version. The suggested citation in the README no longer names a single version.
+- Citation title in title case in `CITATION.cff` and `.zenodo.json`, matching the README.
+
 ## 2026-10-21
 
 - Errata and Lesson 5: the p. 93 sample-size entry no longer says 51 is wrong. The book does not state its assumed proportion; 51 follows at about 2.5% of outcomes wrong, 89 at the conservative 50%, 78 at the book's own under 10% (p. 95). Every assumption tested still needs over half of a typical harvest.

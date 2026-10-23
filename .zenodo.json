@@ -1,5 +1,5 @@
 {
-  "title": "Outcome Harvesting: course, bibliography, templates and red team protocol",
+  "title": "Outcome Harvesting: Course, Bibliography, Templates and Red Team Protocol",
   "upload_type": "lesson",
   "description": "<p>A free library for Outcome Harvesting, an evaluation approach that starts from the changes that have happened and works back to how an intervention contributed to them. It holds an eight-lesson interactive course with reference cards and applied questions; an annotated bibliography of sources each verified at source, with BibTeX and an errata page; five templates; and a red team protocol for checking that a harvest was done properly. Every statement about what an author says carries a page number.</p>",
   "creators": [
@@ -16,5 +16,12 @@
     "utilization-focused evaluation",
     "evaluation training"
   ],
-  "notes": "Written content is licensed CC BY 4.0. Code in the repository is licensed MIT; see LICENSE-CODE."
+  "notes": "Written content is licensed CC BY 4.0. Code in the repository is licensed MIT; see LICENSE-CODE. Cite the all-versions DOI, 10.5281/zenodo.23514918, which always resolves to the latest version.",
+  "related_identifiers": [
+    {
+      "identifier": "https://wenareeba.github.io/outcome-harvesting/",
+      "relation": "isDocumentedBy",
+      "resource_type": "lesson"
+    }
+  ]
 }
